@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Crop Disease Detection</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1>🌱 Crop Disease Detection</h1>
+
+            <p class="subtitle">
+                AI-powered multi-crop disease detection
+            </p>
+
+            <form action="/predict"
+                  method="POST"
+                  enctype="multipart/form-data">
+
+                <label for="image">
+                    Upload a leaf image
+                </label>
+
+                <input
+                    type="file"
+                    id="image"
+                    name="image"
+                    accept="image/*"
+                    required
+                >
+
+                <button type="submit">
+                    🔍 Detect Disease
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
